@@ -26,7 +26,7 @@ a command as root in arbitrary local folders.
 
 %prep
 %setup -q -n %{oname}-%{version}
-%apply_patches
+# %apply_patches
 
 %build
 NOCONFIGURE=1 ./autogen.sh
