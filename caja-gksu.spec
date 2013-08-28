@@ -1,5 +1,6 @@
 %define url_ver %(echo %{version}|cut -d. -f1,2)
 %define oname    mate-file-manager-gksu
+
 Summary: Run command as root in a specified folder
 Name:    caja-gksu
 Version: 1.6.0
@@ -36,9 +37,6 @@ NOCONFIGURE=1 ./autogen.sh
 
 %install
 %makeinstall_std
-
-#we don't want these
-rm -f %{buildroot}%{_libdir}/caja/extensions-2.0/*.la
 
 %find_lang %{oname} --with-gnome --all-name
 
