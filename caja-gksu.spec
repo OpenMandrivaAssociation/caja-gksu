@@ -4,7 +4,7 @@
 Summary: Run command as root in a specified folder
 Name:    caja-gksu
 Version: 1.6.0
-Release: 1
+Release: 2
 Group:   File tools
 License: GPLv2+
 URL:     http://mate-desktop.org
@@ -18,7 +18,8 @@ BuildRequires: pkgconfig(libcaja-extension) >= 1.6.0
 BuildRequires: pkgconfig(libgksu2)
 
 Provides:      caja-open-gksu = %{version}-%{release}
-Provides:      %{oname}-gksu = %{version}-%{release}
+
+%rename %{oname}
 
 %description
 This is a proof-of-concept Caja extension which allows you to run
@@ -26,7 +27,6 @@ a command as root in arbitrary local folders.
 
 %prep
 %setup -q -n %{oname}-%{version}
-# %apply_patches
 
 %build
 NOCONFIGURE=1 ./autogen.sh
