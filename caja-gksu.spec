@@ -7,7 +7,7 @@ Version: 1.6.0
 Release: 2
 Group:   File tools
 License: GPLv2+
-URL:     http://mate-desktop.org
+URL:     https://mate-desktop.org
 Source0: http://pub.mate-desktop.org/releases/%{url_ver}/%{oname}-%{version}.tar.xz
 Patch0:  mate-file-manager-gksu-1.6.0-mga-fix-configure_ac-script.patch
 
